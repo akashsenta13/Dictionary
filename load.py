@@ -1,5 +1,5 @@
 import json
-from difflib import get_close_matches
+from difflib import get_close_matches   # this is to get closer match from list
 
 # load data from json file
 data = json.load(open('data.json'))
@@ -23,6 +23,7 @@ def translate(w):
 # input from user
 word = input('Enter Word: ')
 
+# call function
 output = translate(word.lower())
 if type(output) == list:
     for item in output:
